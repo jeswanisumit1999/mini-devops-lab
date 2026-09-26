@@ -22,6 +22,10 @@ app.get('/', (req, res) => {
   res.send('Hello from mini-app. Request count is ' + requestCount);
 });
 
+app.get('/health', (req, res) => {
+  res.send('OK');
+});
+
 app.listen(PORT, () => {
   console.log('Server listening on port ' + PORT);
 });
